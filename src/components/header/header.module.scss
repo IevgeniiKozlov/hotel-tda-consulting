@@ -1,0 +1,29 @@
+.header { 
+  width: 100%;
+  position: absolute;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.toolbar {
+  justify-content: space-between
+}
+
+.logo {
+  width: fit-content;
+}
+
+.communication {
+  padding-top: 40px;
+
+  .phone {
+    // display: flex;
+    gap: 10px;
+    height: fit-content;
+    align-items: center;
+
+    span {
+      font-size: 20px;
+    }
+  }
+}
