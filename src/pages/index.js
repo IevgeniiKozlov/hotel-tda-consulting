@@ -1,176 +1,250 @@
 import * as React from "react"
+import {
+  Paper,
+  Box,
+  Container,
+  Stack,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button
+} from '@mui/material'
+import { StaticImage } from "gatsby-plugin-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCompassDrafting, faTrowelBricks, faLock, faShieldHalved } from "@fortawesome/free-solid-svg-icons" 
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+import Layout from "../components/main-layout/layout"
+import * as styles from "./index.module.scss"
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { EffectFade, Mousewheel, Pagination } from "swiper";
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+    <Layout>
+      <Paper className={styles.intro}>
+        <StaticImage
+          placeholder="blurred"
+          src="../images/main-page-intro-background.jpg"
+          alt="test"
+          className={styles.bgIntroImage}
+        />
+        <Container>
+          <Typography className={styles.introTitle} variant="h1" component="h1">TDA Development</Typography>
+        </Container>
+      </Paper>
+      <Paper className={styles.aboutCompany}>
+        <Container>
+          <Box className={styles.aboutCompanyBehindTitle}>О компании</Box>
+          <Grid container spacing={6} justifyContent="center">
+            <Grid item container xs={10} md={6} spacing={6}>
+              <Grid item xs={12}>
+                <Stack className={styles.aboutCompanyIntroBlock} spacing={4}>
+                  <Typography className={styles.aboutCompanyIntroBlockTitle} variant="h2" component="h2" >О компании</Typography>
+                  <Typography className={styles.aboutCompanyIntroBlockDescription} variant="body1" component="p" >“TDA Develop” cтроительная компания – современная и динамично развивающаяся, оказывающая широкий спектр услуг в строительном бизнесе от проектирования до сдачи объектов под ключ. Свою деятельность в строительном бизнесе начала осуществлять с 2013 года и прочно зарекомендовала себя надежной Украинской строительной компанией не только на территории Украины, но и за рубежом. Учредителем и генеральным директором строительной компании «TDA Develop» является - Lorem Ipsum.</Typography>
+                </Stack>
+              </Grid>
+              <Grid item xs={12}>
+                <Stack className={styles.aboutCompanyMissionBlock} spacing={2}>
+                  <Typography className={styles.aboutCompanyMissionBlockTitle} variant="h5" component="h3">Миссия</Typography>
+                  <Typography className={styles.aboutCompanyMissionBlockDescription} variant="body1" component="p">Приоритетом группы строительных компаний «TDA Develop» является профессиональный подход с применением инновационных решении в строительстве воздвигаемых объектов, опытный коллектив, качественные материалы и своевременность сдачи объектов с доступной возможностью приобретения не только жилья, но и других объектов недвижимости.</Typography>
+                </Stack>
+              </Grid>
+              <Grid item xs={12}>
+                <Box className={styles.aboutCompanyImagesBlock}>
+                  <StaticImage
+                    className={styles.aboutCompanyImagesBlockDotsGrid}
+                    src="../images/dots-grid-design-by-vexels.png"
+                    alt="test"
+                    width={450}
+                    height={420}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+            <Grid item container xs={10} md={6} spacing={6}>
+              <Grid item>
+                <Stack className={styles.aboutCompanyImagesBlock}>
+                  <StaticImage
+                    className={styles.aboutCompanyImagesBlockImage}
+                    placeholder="blurred"
+                    src="../images/main-page-intro-background.jpg"
+                    alt="test"
+                    width={450}
+                    height={420}
+                  />
+                  <Box className={styles.aboutCompanyImagesBlockSquare} width={450} height={420}></Box>
+                  <StaticImage
+                    className={styles.aboutCompanyImagesBlockDotsGridSecond}
+                    src="../images/dots-grid-design-by-vexels.png"
+                    alt="test"
+                    width={450}
+                    height={500}
+                  />
+                  <StaticImage
+                    className={styles.aboutCompanyImagesBlockDotsGridThird}
+                    src="../images/dots-grid-design-by-vexels.png"
+                    alt="test"
+                    width={450}
+                    height={470} 
+                  />
+                </Stack>
+              </Grid>
+              <Grid item>
+                <Stack className={styles.aboutCompanyTargetBlock} spacing={2}>
+                  <Typography className={styles.aboutCompanyTargetBlockTitle} variant="h5" component="h3">Цель</Typography>
+                  <Typography className={styles.aboutCompanyTargetBlockDescription} variant="body1" component="p">Укрепление статуса компании, которая способна обеспечить потребителя доступной и качественной недвижимостью в срок. Развитие, надежность и качество!</Typography>
+                </Stack>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </Paper>
+      <Paper className={styles.projects}>
+        <Container>
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography className={styles.projectsTitle} variant="h2" component="h2" hidden>Проекты</Typography>
+              <Box className={styles.projectsBehindTitle}>Проекты</Box>
+            </Grid>
+            <Grid item xs={9} margin="0 auto">
+              <Swiper
+                direction={"vertical"}
+                mousewheel={true}
+                slidesPerView={1}
+                spaceBetween={50}
+                effect={"fade"}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[EffectFade, Mousewheel, Pagination]}
+                className={styles.swiper}
               >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+                <SwiperSlide className={styles.swiperSlide}>
+                  <Card className={styles.sliderCard}>
+                    <CardMedia className={styles.sliderCardImage}>
+                      <StaticImage
+                        src="../images/main-page-intro-background.jpg"
+                        alt="test"
+                        width={300}
+                        height={300}
+                      />
+                    </CardMedia>
+                    <CardContent className={styles.sliderCardContent}>
+                      <Typography className={styles.sliderCardContentTitle} variant="h4" component="h3">
+                        Lorem Ipsum Villa
+                      </Typography>
+                      <Typography className={styles.sliderCardContentDescription} variant="body1" component="div">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
+                      </Typography>
+                      <Button className={styles.sliderCardContentBtn}>READ MORE</Button>
+                    </CardContent>
+                  </Card>
+                </SwiperSlide>
+                <SwiperSlide className={styles.swiperSlide}>
+                  <Card className={styles.sliderCard}>
+                    <CardMedia className={styles.sliderCardImage}>
+                      <StaticImage
+                        src="../images/main-page-intro-background.jpg"
+                        alt="test"
+                        width={300}
+                        height={300}
+                      />
+                    </CardMedia>
+                    <CardContent className={styles.sliderCardContent}>
+                      <Typography className={styles.sliderCardContentTitle} variant="h4" component="h3">
+                      Lorem Ipsum hotel
+                      </Typography>
+                      <Typography className={styles.sliderCardContentDescription} variant="body1" component="div">
+                        TEST consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
+                      </Typography>
+                      <Button className={styles.sliderCardContentBtn}>READ MORE</Button>
+                    </CardContent>
+                  </Card>
+                </SwiperSlide>
+                
+              </Swiper>
+              <StaticImage
+                className={styles.projectsImageDotsGrid}
+                src="../images/dots-grid-design-by-vexels.png"
+                alt="test"
+                width={400}
+                height={400} 
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </Paper>
+      <Paper className={styles.services}>
+        <Container>
+          <Grid container>
+            <Grid item xs={12} marginBottom={10}>
+              <Box className={styles.servicesBehindTitle}>Почему TDA?</Box>
+              <Typography className={styles.servicesTitle} variant="h2" component="h2">Почему TDA DEVELOPMENT?</Typography>
+            </Grid>
+            <Grid item container xs={12} justifyContent="space-between;">
+              <Grid item xs={5}>
+                <Stack className={styles.servicesImagesBlock} alignItems="center">
+                  <StaticImage
+                    className={styles.servicesImagesBlockImage}
+                    placeholder="blurred"
+                    src="../images/main-page-intro-background.jpg"
+                    alt="test"
+                    width={450}
+                    height={420}
+                  />
+                  <Box className={styles.servicesImagesBlockSquare} width={450} height={420}></Box>
+                  <StaticImage
+                    className={styles.servicesImagesBlockDotsGrid}
+                    src="../images/dots-grid-design-by-vexels.png"
+                    alt="test"
+                    width={450}
+                    height={420}
+                  />
+                </Stack>
+              </Grid>
+              <Grid item container xs={6} columnSpacing={3} rowGap={4} alignContent="center" textAlign="center">
+                <Grid item xs={6}>
+                  <Stack spacing={2}>
+                    <FontAwesomeIcon icon={faCompassDrafting} size="2x" />
+                    <Typography variant="h5" component="h5">Разрабатываем уникальные проекты</Typography>
+                    <Typography variant="body1" component="p">Комплексная разработка технического проекта с учетом всех особенностей объекта и местности</Typography>
+                  </Stack>
+                </Grid>
+                <Grid item xs={6}>
+                  <Stack spacing={2}>
+                    <FontAwesomeIcon icon={faTrowelBricks} size="2x" />
+                    <Typography variant="h5" component="h5" >Строим объекты любого типа</Typography>
+                    <Typography variant="body1" component="p">Объекты любого промышленного назначения – от небольшого перерабатывающего цеха к производственному комплексу</Typography>
+                  </Stack>
+                </Grid>
+                <Grid item xs={6}>
+                  <Stack spacing={2}>
+                    <FontAwesomeIcon icon={faShieldHalved} size="2x" />
+                    <Typography variant="h5" component="h5">Гарантия на постройку</Typography>
+                    <Typography variant="body1" component="p">Использование качественных материалов и современных технологий строительства позволяет нам гарантировать превосходное качество возведенных объектов</Typography>
+                  </Stack>
+                </Grid>
+                <Grid item xs={6}>
+                  <Stack spacing={2}>
+                    <FontAwesomeIcon icon={faLock} size="2x" />
+                    <Typography variant="h5" component="h5">Строительство под ключ</Typography>
+                    <Typography variant="body1" component="p">От разработки проекта до генерального подряда – вы получаете готовый к использованию объект в необходимый срок</Typography>
+                  </Stack>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </Paper>
+    </Layout>
   )
 }
 
 export default IndexPage
-
-export const Head = () => <title>Home Page</title>
