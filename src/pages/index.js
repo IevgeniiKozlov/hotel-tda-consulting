@@ -1,3 +1,5 @@
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { graphql } from 'gatsby'
 import * as React from "react"
 import {
   Paper,
@@ -36,24 +38,46 @@ const IndexPage = () => {
           className={styles.bgIntroImage}
         />
         <Container>
-          <Typography className={styles.introTitle} variant="h1" component="h1">TDA Development</Typography>
+          <Grid className={styles.content} container>
+            <Grid item xs={6}>
+              <Stack className={styles.presentationBlock}>
+                <Box className={styles.title}>
+                  <Box className={styles.block} component="span"></Box>
+                  <Typography variant="h1" component="h1">TDA<span></span></Typography>
+                </Box>
+                <Box className={styles.role}>
+                  <Box className={styles.block} component="span"></Box>
+                  <Typography className={styles.introTitle} variant="h1" component="p">DEVELOPMENT</Typography>
+                </Box>
+              </Stack>
+            </Grid>
+            <Grid item xs={5}></Grid>
+          </Grid>
         </Container>
       </Paper>
       <Paper className={styles.aboutCompany}>
         <Container>
-          <Box className={styles.aboutCompanyBehindTitle}>О компании</Box>
+          <Box className={styles.aboutCompanyBehindTitle}><Trans i18nKey="about-company.intro.title">Про компанію</Trans></Box>
           <Grid container spacing={6} justifyContent="center">
             <Grid item container xs={10} md={6} spacing={6}>
               <Grid item xs={12}>
                 <Stack className={styles.aboutCompanyIntroBlock} spacing={4}>
-                  <Typography className={styles.aboutCompanyIntroBlockTitle} variant="h2" component="h2" >О компании</Typography>
-                  <Typography className={styles.aboutCompanyIntroBlockDescription} variant="body1" component="p" >“TDA Develop” cтроительная компания – современная и динамично развивающаяся, оказывающая широкий спектр услуг в строительном бизнесе от проектирования до сдачи объектов под ключ. Свою деятельность в строительном бизнесе начала осуществлять с 2013 года и прочно зарекомендовала себя надежной Украинской строительной компанией не только на территории Украины, но и за рубежом. Учредителем и генеральным директором строительной компании «TDA Develop» является - Lorem Ipsum.</Typography>
+                  <Typography className={styles.aboutCompanyIntroBlockTitle} variant="h2" component="h2" >
+                    <Trans i18nKey="about-company.intro.title">Про компанію</Trans>
+                  </Typography>
+                  <Typography className={styles.aboutCompanyIntroBlockDescription} variant="body1" component="p">
+                    <Trans i18nKey="about-company.intro.description">«TDA Develop» будівельна компанія - сучасна та динамічно розвивається, що надає широкий спектр послуг у будівельному бізнесі від проектування до здачі об'єктів під ключ. Свою діяльність у будівельному бізнесі почала здійснювати з 2013 року та міцно зарекомендувала себе надійною Українською будівельною компанією не лише на території України, а й за кордоном. Засновником та генеральним директором будівельної компанії «TDA Develop» є – Lorem Ipsum.</Trans>
+                  </Typography>
                 </Stack>
               </Grid>
               <Grid item xs={12}>
                 <Stack className={styles.aboutCompanyMissionBlock} spacing={2}>
-                  <Typography className={styles.aboutCompanyMissionBlockTitle} variant="h5" component="h3">Миссия</Typography>
-                  <Typography className={styles.aboutCompanyMissionBlockDescription} variant="body1" component="p">Приоритетом группы строительных компаний «TDA Develop» является профессиональный подход с применением инновационных решении в строительстве воздвигаемых объектов, опытный коллектив, качественные материалы и своевременность сдачи объектов с доступной возможностью приобретения не только жилья, но и других объектов недвижимости.</Typography>
+                  <Typography className={styles.aboutCompanyMissionBlockTitle} variant="h5" component="h3">
+                    <Trans i18nKey="about-company.mission.title">Місія</Trans>
+                  </Typography>
+                  <Typography className={styles.aboutCompanyMissionBlockDescription} variant="body1" component="p">
+                    <Trans i18nKey="about-company.mission.description">Пріоритетом групи будівельних компаній «TDA Develop» є професійний підхід із застосуванням інноваційних рішень у будівництві об'єктів, що споруджуються, досвідчений колектив, якісні матеріали та своєчасність здачі об'єктів з доступною можливістю придбання не тільки житла, а й інших об'єктів нерухомості."</Trans>
+                  </Typography>
                 </Stack>
               </Grid>
               <Grid item xs={12}>
@@ -98,8 +122,12 @@ const IndexPage = () => {
               </Grid>
               <Grid item>
                 <Stack className={styles.aboutCompanyTargetBlock} spacing={2}>
-                  <Typography className={styles.aboutCompanyTargetBlockTitle} variant="h5" component="h3">Цель</Typography>
-                  <Typography className={styles.aboutCompanyTargetBlockDescription} variant="body1" component="p">Укрепление статуса компании, которая способна обеспечить потребителя доступной и качественной недвижимостью в срок. Развитие, надежность и качество!</Typography>
+                  <Typography className={styles.aboutCompanyTargetBlockTitle} variant="h5" component="h3">
+                    <Trans i18nKey="about-company.target.title">Ціль</Trans>
+                  </Typography>
+                  <Typography className={styles.aboutCompanyTargetBlockDescription} variant="body1" component="p">
+                    <Trans i18nKey="about-company.target.description">Зміцнення статусу компанії, яка здатна забезпечити споживача доступною та якісною нерухомістю у строк. Розвиток, надійність та якість!</Trans>
+                  </Typography>
                 </Stack>
               </Grid>
             </Grid>
@@ -110,8 +138,12 @@ const IndexPage = () => {
         <Container>
           <Grid container>
             <Grid item xs={12}>
-              <Typography className={styles.projectsTitle} variant="h2" component="h2" hidden>Проекты</Typography>
-              <Box className={styles.projectsBehindTitle}>Проекты</Box>
+              <Typography className={styles.projectsTitle} variant="h2" component="h2" hidden>
+                <Trans i18nKey="projects.title">Проекти</Trans>
+              </Typography>
+              <Box className={styles.projectsBehindTitle}>
+                <Trans i18nKey="projects.title">Проекти</Trans>
+              </Box>
             </Grid>
             <Grid item xs={9} margin="0 auto">
               <Swiper
@@ -185,10 +217,14 @@ const IndexPage = () => {
         <Container>
           <Grid container>
             <Grid item xs={12} marginBottom={10}>
-              <Box className={styles.servicesBehindTitle}>Почему TDA?</Box>
-              <Typography className={styles.servicesTitle} variant="h2" component="h2">Почему TDA DEVELOPMENT?</Typography>
+              <Box className={styles.servicesBehindTitle}>
+                <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
+              </Box>
+              <Typography className={styles.servicesTitle} variant="h2" component="h2">
+                <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
+              </Typography>
             </Grid>
-            <Grid item container xs={12} justifyContent="space-between;">
+            <Grid item container xs={12} justifyContent="space-between">
               <Grid item xs={5}>
                 <Stack className={styles.servicesImagesBlock} alignItems="center">
                   <StaticImage
@@ -213,29 +249,45 @@ const IndexPage = () => {
                 <Grid item xs={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faCompassDrafting} size="2x" />
-                    <Typography variant="h5" component="h5">Разрабатываем уникальные проекты</Typography>
-                    <Typography variant="body1" component="p">Комплексная разработка технического проекта с учетом всех особенностей объекта и местности</Typography>
+                    <Typography variant="h5" component="h5">
+                      <Trans i18nKey="services.list-services.item-1.title">Розробляємо унікальні проекти</Trans>
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                      <Trans i18nKey="services.list-services.item-1.description">Комплексна розробка технічного проекту з урахуванням усіх особливостей об'єкта та місцевості</Trans>
+                    </Typography>
                   </Stack>
                 </Grid>
                 <Grid item xs={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faTrowelBricks} size="2x" />
-                    <Typography variant="h5" component="h5" >Строим объекты любого типа</Typography>
-                    <Typography variant="body1" component="p">Объекты любого промышленного назначения – от небольшого перерабатывающего цеха к производственному комплексу</Typography>
+                    <Typography variant="h5" component="h5">
+                      <Trans i18nKey="services.list-services.item-2.title">Будуємо об'єкти будь-якого типу</Trans>
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                      <Trans i18nKey="services.list-services.item-2.description">Об'єкти будь-якого промислового призначення – від невеликого переробного цеху до виробничого комплексу</Trans>
+                    </Typography>
                   </Stack>
                 </Grid>
                 <Grid item xs={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faShieldHalved} size="2x" />
-                    <Typography variant="h5" component="h5">Гарантия на постройку</Typography>
-                    <Typography variant="body1" component="p">Использование качественных материалов и современных технологий строительства позволяет нам гарантировать превосходное качество возведенных объектов</Typography>
+                    <Typography variant="h5" component="h5">
+                      <Trans i18nKey="services.list-services.item-3.title">Гарантія на будівництво</Trans>
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                      <Trans i18nKey="services.list-services.item-3.description">Використання якісних матеріалів та сучасних технологій будівництва дозволяє нам гарантувати чудову якість зведених об'єктів</Trans>
+                    </Typography>
                   </Stack>
                 </Grid>
                 <Grid item xs={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faLock} size="2x" />
-                    <Typography variant="h5" component="h5">Строительство под ключ</Typography>
-                    <Typography variant="body1" component="p">От разработки проекта до генерального подряда – вы получаете готовый к использованию объект в необходимый срок</Typography>
+                    <Typography variant="h5" component="h5">
+                      <Trans i18nKey="services.list-services.item-4.title">Будівництво під ключ</Trans>
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                      <Trans i18nKey="services.list-services.item-4.description">Від розробки проекту до генерального підряду – ви отримуєте готовий до використання об'єкт у потрібний термін</Trans>
+                    </Typography>
                   </Stack>
                 </Grid>
               </Grid>
@@ -248,3 +300,19 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: { ns: { in: ["index"] }, language: { eq: $language } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
