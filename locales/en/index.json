@@ -1,0 +1,41 @@
+{
+  "intro": {},
+  "about-company": {
+    "intro": {
+      "title": "About company",
+      "description": "“TDA Develop” construction company is a modern and dynamically developing company that provides a wide range of services in the construction business from design to turnkey delivery of facilities. She began her activities in the construction business in 2013 and has firmly established herself as a reliable Ukrainian construction company not only in Ukraine, but also abroad. The founder and CEO of the construction company ”TDA Develop” is - Lorem Ipsum."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "The priority of the group of construction companies “TDA Develop“ is a professional approach using innovative solutions in the construction of objects under construction, an experienced team, high-quality materials and timely delivery of objects with an affordable opportunity to purchase not only housing, but also other real estate objects."
+    },
+    "target": {
+      "title": "Target",
+      "description": "Strengthening the status of a company capable of providing the consumer with affordable and high-quality real estate on time. Development, reliability and quality!"
+    }
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "services": {
+    "title": "Why TDA DEVELOPMENT?",
+    "list-services": {
+      "item-1": {
+        "title": "We develop unique projects",
+        "description": "Complex development of the technical project taking into account all the features of the object and the area"
+      },
+      "item-2": {
+        "title": "We build objects of any type",
+        "description": "Objects of any industrial purpose - from a small processing shop to a production complex"
+      },
+      "item-3": {
+        "title": "Building guarantee",
+        "description": "The use of high-quality materials and modern construction technologies allows us to guarantee the excellent quality of the constructed facilities."
+      },
+      "item-4": {
+        "title": "Turnkey construction",
+        "description": "From project development to general contracting - you get a ready-to-use object in the required time"
+      }
+    }
+  }
+}
