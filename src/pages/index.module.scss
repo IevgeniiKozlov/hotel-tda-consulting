@@ -241,6 +241,7 @@
   &-mission-block {}
 
   &-images-block {
+    display: flex;
     width: 100%;
     height: auto;
     position: relative;
@@ -274,14 +275,15 @@
     }
 
     &-dots-grid {
+      width: auto;
       position: absolute;
-      bottom: -26rem;
-      left: -10rem;
+      bottom: -25rem;
+      left: -5rem;
       z-index: 0;
 
       @include for-phone-only {
-        width: 20rem;
-        height: 20rem;
+        width: 14rem;
+        height: 14rem;
         top: -1rem;
         left: 0;
       }
@@ -293,9 +295,17 @@
       top: 1rem;
       right: -6rem;
       z-index: 0;
+
+      @include for-phone-only {
+        width: auto;
+        height: auto;
+        top: 7rem;
+        left: 10rem;
+      }
     }
 
     &-dots-grid-third {
+      width: auto;
       position: absolute;
       top: 10rem;
       right: -34.5rem;

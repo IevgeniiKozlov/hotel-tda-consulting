@@ -105,7 +105,7 @@ const IndexPage = () => {
                     src="../images/main-intro-build.jpg"
                     alt="test"
                     width={450}
-                    height={420}
+                    height={450}
                   />
                   <Box className={styles.aboutCompanyImagesBlockSquare}></Box>
                   <StaticImage
@@ -113,7 +113,7 @@ const IndexPage = () => {
                     src="../images/dots-grid-design-by-vexels.png"
                     alt="test"
                     width={450}
-                    height={500}
+                    height={550}
                   />
                   <StaticImage
                     className={styles.aboutCompanyImagesBlockDotsGridThird}
@@ -122,6 +122,7 @@ const IndexPage = () => {
                     width={450}
                     height={450} 
                   />
+                  
                 </Stack>
               </Grid>
               <Grid item xs={11}>
