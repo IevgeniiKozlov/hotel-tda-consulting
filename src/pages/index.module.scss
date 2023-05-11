@@ -68,8 +68,6 @@
           -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
           animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
           animation-delay: 2s;
-
-         
         }
       }
     }
@@ -195,12 +193,19 @@
 /* About Company */
 .about-company {
   position: relative;
-  padding-top: 100px;
   padding-bottom: 50px;
   overflow: hidden;
   
   @include for-phone-only {
     padding-top: 50px;
+  }
+
+  @include for-tablet-portrait-up {
+    padding-top: 75px;
+  }
+
+  @include for-tablet-landscape-up {
+    padding-top: 100px;
   }
 
   &-behind-title {
@@ -233,8 +238,15 @@
     opacity: 0.7;
 
     @include for-phone-only {
-      top: 0;
+      font-size: 2.5rem;
+    }
+
+    @include for-tablet-landscape-up {
       font-size: 3rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 4rem;
     }
   }
 
@@ -331,9 +343,24 @@
     position: absolute;
     top: -10px;
     left: 40px;
-    font-size: 270px;
     opacity: 0.05;
     white-space: nowrap;
+
+    @include for-phone-only {
+      font-size: 6rem;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 9rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 10rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 15rem;
+    }
   }
 
   &-image-dots-grid {
@@ -403,7 +430,6 @@
     width: 300px;
     flex-shrink: 0;
     height: 300px;
-    // background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
     box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
     border-radius: 20px;
     transform: translateX(-80px);
@@ -475,21 +501,66 @@
 /* Services */
 .services {
   position: relative;
-  padding: 100px 0;
   box-shadow: none;
+
+  @include for-phone-only {
+    padding: 3rem 0;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 4rem 0;
+  }
+
 
   &-behind-title {
     position: absolute;
-    top: -40px;
-    left: 50px;
-    font-size: 270px;
+    top: 0rem;
+    left: 1rem;
     opacity: 0.05;
     white-space: nowrap;
+
+    @include for-phone-only {
+      top: 0;
+      left: 0;
+      font-size: 6rem;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 7rem;
+    }
+
+    @include for-tablet-landscape-up {
+      top: -1rem;
+      font-size: 10rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 15rem;
+    }
   }
 
   &-title {
     font-weight: bold;
     opacity: 0.7;
+
+    @include for-phone-only {
+      margin-bottom: 3rem;
+      font-size: 2rem;
+    }
+
+    @include for-tablet-portrait-up {
+      margin-bottom: 4rem;
+      font-size: 2.5rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 3rem;
+    }
+
+    @include for-desktop-up {
+      margin-bottom: 6rem;
+      font-size: 4rem;
+    }
   }
 
   &-images-block {
@@ -539,50 +610,94 @@
 
 /* Contacts */
 .contacts {
-  padding-top: 70px;
-  padding-bottom: 75px;
   position: relative;
+  padding: 3rem 0;
   box-shadow: none;
-
-  // .bg-element {
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 0;
-  //   width: 50%;
-  //   height: auto;
-  //   overflow: hidden;
-  //   border-top-left-radius: 50px;
-  //   z-index: 3;
-
-    // @include for-tablet-landscape-up {
-    //   width: 50%;
-    // }
-
-   
-  // }
 
   .content {
     position: relative;
-    z-index: 4;
+    z-index: 1;
   }
 
   &-behind-title {
     position: absolute;
-    top: -50px;
-    left: 50px;
-    font-size: 270px;
     opacity: 0.05;
     white-space: nowrap;
-    z-index: 0;
+
+    @include for-phone-only {
+      top: -3rem;
+      left: -1rem;
+      font-size: 6rem;
+    }
+
+    @include for-tablet-portrait-up {
+      top: -4rem;
+      left: -1rem;
+      font-size: 7rem;
+    }
+
+    @include for-tablet-landscape-up {
+      top: -5rem;
+      font-size: 10rem;
+    }
+
+    @include for-desktop-up {
+      top: -6rem;
+      left: -5rem;
+      font-size: 15rem;
+    }
   }
 
   &-title {
     font-weight: bold;
     opacity: 0.7;
     margin-bottom: 100px;
+
+    @include for-phone-only {
+      margin-bottom: 3rem;
+      font-size: 2rem;
+    }
+
+    @include for-tablet-portrait-up {
+      margin-bottom: 4rem;
+      font-size: 2.5rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 3rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 4rem;
+    }
   }
 
   &-form-block {
-    margin-bottom: 100px;
+    margin-bottom: 6rem;
+
+  
+  }
+
+  .bg-contacts-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    @include for-phone-only {
+      width: 100%;
+      height: 60%;
+    }
+
+    @include for-tablet-portrait-up {
+      width: 100%;
+      height: 65%;
+    }
+    
+    @include for-tablet-landscape-up {
+      width: 50%;
+      height: 80%;
+      border-top-left-radius: 4rem;
+    }
   }
 }

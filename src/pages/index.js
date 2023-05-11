@@ -121,8 +121,7 @@ const IndexPage = () => {
                     alt="test"
                     width={450}
                     height={450} 
-                  />
-                  
+                  /> 
                 </Stack>
               </Grid>
               <Grid item xs={11}>
@@ -221,7 +220,7 @@ const IndexPage = () => {
       <Paper className={styles.services} component="section">
         <Container>
           <Grid container>
-            <Grid item xs={12} marginBottom={14}>
+            <Grid item xs={12}>
               <Box className={styles.servicesBehindTitle}>
                 <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
               </Box>
@@ -229,9 +228,9 @@ const IndexPage = () => {
                 <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
               </Typography>
             </Grid>
-            <Grid item container xs={12} gap={15} justifyContent="center">
-              <Grid item xs={8} md={5}>
-                <Stack className={styles.servicesImagesBlock} alignItems="center">
+            <Grid item container xs={12} columnGap={5} rowGap={15} justifyContent="center" alignItems="center">
+              <Grid item xs={8} md={6}>
+                <Stack className={styles.servicesImagesBlock}>
                   <Box className={styles.servicesImagesBlockOverlay}></Box>
                   <StaticImage
                     className={styles.servicesImagesBlockImage}
@@ -251,7 +250,7 @@ const IndexPage = () => {
                   />
                 </Stack>
               </Grid>
-              <Grid item container xs={8} md={5} columnSpacing={3} rowGap={4} alignContent="center" textAlign="center">
+              <Grid item container xs={8} md={5} columnSpacing={3} rowSpacing={4} alignContent="center" textAlign="center">
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faCompassDrafting} size="2x" />
@@ -302,19 +301,17 @@ const IndexPage = () => {
         </Container>
       </Paper>
       <Paper className={styles.contacts} component="section">
-        <Box className={styles.contactsBehindTitle}>
-          <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
-        </Box>
-        {/* <Box className={styles.bgElement}>
-          <StaticImage
-            className={styles.img}
-            src="../images/main-home.jpg"
-            alt="test"
-          />
-        </Box> */}
+        <StaticImage
+          className={styles.bgContactsImage}
+          src="../images/main-home.jpg"
+          alt="test"
+        />
         <Container>
           <Grid className={styles.content} container columnGap={10}>
             <Grid item xs={12}>
+              <Box className={styles.contactsBehindTitle}>
+                <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
+              </Box>
               <Typography className={styles.contactsTitle} variant="h2" component="h2">
                 <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
               </Typography>
@@ -322,7 +319,7 @@ const IndexPage = () => {
             <Grid className={styles.contactsFormBlock} item xs={10} md={5}>
               <ContactForm />
             </Grid>
-            <Grid item xs={8} md={6}></Grid>
+            <Grid item xs={8} md={5}></Grid>
           </Grid>
         </Container>
       </Paper>
