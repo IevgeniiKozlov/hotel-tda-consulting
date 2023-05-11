@@ -1,8 +1,18 @@
+@import "../styles/styles.scss";
 /* Intro */
 .intro {
   height: 100vh;
   position: relative;
   padding-top: 120px;
+
+  .bg-intro-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
 
   :global(.MuiContainer-root) {
     height: 100%;
@@ -70,7 +80,6 @@
       position: relative;
       display: flex;
       align-items: center;
-      // margin-top: -10px;
 
       .block {
         width: 0%;
@@ -183,15 +192,6 @@
   }
 }
 
-.bg-intro-image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 /* About Company */
 .about-company {
   position: relative;
@@ -199,56 +199,106 @@
   padding-bottom: 50px;
   overflow: hidden;
   
+  @include for-phone-only {
+    padding-top: 50px;
+  }
+
   &-behind-title {
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 15px;
-    font-size: 270px;
     opacity: 0.05;
     white-space: nowrap;
+
+    @include for-phone-only {
+      font-size: 6rem;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 9rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 10rem;
+    }
+
+    @include for-desktop-up {
+      top: -2rem;
+      font-size: 15rem;
+    }
   }
   
-  &-intro-block {}
+  &-intro-block-title {
+    font-weight: bold;
+    opacity: 0.7;
+
+    @include for-phone-only {
+      top: 0;
+      font-size: 3rem;
+    }
+  }
 
   &-mission-block {}
 
   &-images-block {
+    width: 100%;
+    height: auto;
     position: relative;
-    
-    &-image {
-      top: 30px;
-      left: 0;
-      z-index: 2;
+    top: 30px;
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
       border-radius: 25px;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+
+    }
+
+    &-image {
+      z-index: 2;
+      border-radius: 1.5rem;
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     }
 
     &-square {
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 70px;
-      left: 35px;
+      top: 3rem;
+      left: 3rem;
       z-index: 1;
-      background-color: #FECC3F;
-      border-radius: 25px;
+      border-radius: 1.5rem;
+      background-image: linear-gradient(147deg, #fe8a39 0%, #FECC3F 74%);
     }
 
     &-dots-grid {
       position: absolute;
-      left: -100px;
-      bottom: -400px;
+      bottom: -26rem;
+      left: -10rem;
       z-index: 0;
+
+      @include for-phone-only {
+        width: 20rem;
+        height: 20rem;
+        top: -1rem;
+        left: 0;
+      }
     }
 
     &-dots-grid-second {
+      width: 100%;
       position: absolute;
-      top: 35px;
-      right: -65px;
-      z-index: 0;  
+      top: 1rem;
+      right: -6rem;
+      z-index: 0;
     }
 
     &-dots-grid-third {
       position: absolute;
-      top: 160px;
-      right: -520px;
+      top: 10rem;
+      right: -34.5rem;
       z-index: 0;
     }
   }
@@ -257,13 +307,6 @@
     margin-top: 100px;
   }
 }
-
-
-// @media (max-width: 768px) {
-//   .about-company {
-//     padding-top: 0;
-//   }
-// }
 
 /* Projects */
 .projects {
@@ -287,7 +330,6 @@
     position: absolute;
     top: 35%;
     right: 10%;
-
 
   }
 }
@@ -332,7 +374,7 @@
 
     :global(.swiper-pagination-bullet-active) {
       opacity: 1;
-      background: #fd3838;
+      background: #fe8a39;
       height: 30px;
       box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
     }
@@ -351,7 +393,7 @@
     width: 300px;
     flex-shrink: 0;
     height: 300px;
-    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    // background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
     box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
     border-radius: 20px;
     transform: translateX(-80px);
@@ -363,7 +405,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+      background-image: linear-gradient(147deg, #fe8a39 0%, #FECC3F 74%);
       border-radius: 20px;
       opacity: 0.8;
     }
@@ -400,13 +442,13 @@
       font-weight: 600;
     }
     // Descriptin
-    &-desc {}
+    // &-desc {}
 
     // Button Action
     &-btn {
       display: inline-flex;
       width: 200px;
-      background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+      background-image: linear-gradient(147deg, #fe8a39 0%, #FECC3F 74%);
       padding: 15px 35px;
       border-radius: 50px;
       color: #fff;
@@ -424,38 +466,113 @@
 .services {
   position: relative;
   padding: 100px 0;
+  box-shadow: none;
 
   &-behind-title {
     position: absolute;
-    top: -50px;
-    left: 0;
+    top: -40px;
+    left: 50px;
     font-size: 270px;
     opacity: 0.05;
     white-space: nowrap;
   }
 
+  &-title {
+    font-weight: bold;
+    opacity: 0.7;
+  }
+
   &-images-block {
     position: relative;
+    width: fit-content;
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      border-radius: 25px;
+      background-color: rgba($color: #000000, $alpha: 0.4)
+    }
 
     &-image {
+      top: 0;
+      left: 10px;
       z-index: 2;
       border-radius: 25px;
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     }
 
     &-square {
       position: absolute;
+      width: 100%;
+      height: 100%;
       top: 35px;
       left: -20px;
       z-index: 1;
       border-radius: 25px;
-      background-color: #FECC3F;
+      background-image: linear-gradient(147deg, #fe8a39 0%, #FECC3F 74%);
     }
 
     &-dots-grid {
+      width: 100%;
+      height: 100%;
       position: absolute;
       top: 70px;
       left: -60px;
       z-index: 0;
     }
+  }
+}
+
+/* Contacts */
+.contacts {
+  padding-top: 70px;
+  padding-bottom: 75px;
+  position: relative;
+  box-shadow: none;
+
+  // .bg-element {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 50%;
+  //   height: auto;
+  //   overflow: hidden;
+  //   border-top-left-radius: 50px;
+  //   z-index: 3;
+
+    // @include for-tablet-landscape-up {
+    //   width: 50%;
+    // }
+
+   
+  // }
+
+  .content {
+    position: relative;
+    z-index: 4;
+  }
+
+  &-behind-title {
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    font-size: 270px;
+    opacity: 0.05;
+    white-space: nowrap;
+    z-index: 0;
+  }
+
+  &-title {
+    font-weight: bold;
+    opacity: 0.7;
+    margin-bottom: 100px;
+  }
+
+  &-form-block {
+    margin-bottom: 100px;
   }
 }

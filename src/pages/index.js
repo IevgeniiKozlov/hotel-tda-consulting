@@ -26,16 +26,17 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Mousewheel, Pagination } from "swiper";
+import { ContactForm } from "../components/form/contact-form";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Paper className={styles.intro}>
+      <Paper className={styles.intro} component="section">
         <StaticImage
+          className={styles.bgIntroImage}
           placeholder="blurred"
           src="../images/main-page-intro-background.jpg"
           alt="test"
-          className={styles.bgIntroImage}
         />
         <Container>
           <Grid className={styles.content} container>
@@ -55,12 +56,14 @@ const IndexPage = () => {
           </Grid>
         </Container>
       </Paper>
-      <Paper className={styles.aboutCompany}>
+      <Paper className={styles.aboutCompany} component="section">
         <Container>
-          <Box className={styles.aboutCompanyBehindTitle}><Trans i18nKey="about-company.intro.title">Про компанію</Trans></Box>
+          <Box className={styles.aboutCompanyBehindTitle}>
+            <Trans i18nKey="about-company.intro.title">Про компанію</Trans>
+          </Box>
           <Grid container spacing={6} justifyContent="center">
-            <Grid item container xs={10} md={6} spacing={6}>
-              <Grid item xs={12}>
+            <Grid item container xs={12} md={6} rowSpacing={4} justifyContent="center">
+              <Grid item xs={11}>
                 <Stack className={styles.aboutCompanyIntroBlock} spacing={4}>
                   <Typography className={styles.aboutCompanyIntroBlockTitle} variant="h2" component="h2" >
                     <Trans i18nKey="about-company.intro.title">Про компанію</Trans>
@@ -70,7 +73,7 @@ const IndexPage = () => {
                   </Typography>
                 </Stack>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={11}>
                 <Stack className={styles.aboutCompanyMissionBlock} spacing={2}>
                   <Typography className={styles.aboutCompanyMissionBlockTitle} variant="h5" component="h3">
                     <Trans i18nKey="about-company.mission.title">Місія</Trans>
@@ -80,30 +83,31 @@ const IndexPage = () => {
                   </Typography>
                 </Stack>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={11}>
                 <Box className={styles.aboutCompanyImagesBlock}>
                   <StaticImage
                     className={styles.aboutCompanyImagesBlockDotsGrid}
                     src="../images/dots-grid-design-by-vexels.png"
                     alt="test"
                     width={450}
-                    height={420}
+                    height={450}
                   />
                 </Box>
               </Grid>
             </Grid>
-            <Grid item container xs={10} md={6} spacing={6}>
-              <Grid item>
+            <Grid item container xs={12} md={6} rowSpacing={4} justifyContent="center">
+              <Grid item xs={8} md={11} lg={10}>
                 <Stack className={styles.aboutCompanyImagesBlock}>
+                  <Box className={styles.aboutCompanyImagesBlockOverlay}></Box>
                   <StaticImage
                     className={styles.aboutCompanyImagesBlockImage}
                     placeholder="blurred"
-                    src="../images/main-page-intro-background.jpg"
+                    src="../images/main-intro-build.jpg"
                     alt="test"
                     width={450}
                     height={420}
                   />
-                  <Box className={styles.aboutCompanyImagesBlockSquare} width={450} height={420}></Box>
+                  <Box className={styles.aboutCompanyImagesBlockSquare}></Box>
                   <StaticImage
                     className={styles.aboutCompanyImagesBlockDotsGridSecond}
                     src="../images/dots-grid-design-by-vexels.png"
@@ -116,11 +120,11 @@ const IndexPage = () => {
                     src="../images/dots-grid-design-by-vexels.png"
                     alt="test"
                     width={450}
-                    height={470} 
+                    height={450} 
                   />
                 </Stack>
               </Grid>
-              <Grid item>
+              <Grid item xs={11}>
                 <Stack className={styles.aboutCompanyTargetBlock} spacing={2}>
                   <Typography className={styles.aboutCompanyTargetBlockTitle} variant="h5" component="h3">
                     <Trans i18nKey="about-company.target.title">Ціль</Trans>
@@ -134,7 +138,7 @@ const IndexPage = () => {
           </Grid>
         </Container>
       </Paper>
-      <Paper className={styles.projects}>
+      <Paper className={styles.projects} component="section">
         <Container>
           <Grid container>
             <Grid item xs={12}>
@@ -213,10 +217,10 @@ const IndexPage = () => {
           </Grid>
         </Container>
       </Paper>
-      <Paper className={styles.services}>
+      <Paper className={styles.services} component="section">
         <Container>
           <Grid container>
-            <Grid item xs={12} marginBottom={10}>
+            <Grid item xs={12} marginBottom={14}>
               <Box className={styles.servicesBehindTitle}>
                 <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
               </Box>
@@ -224,13 +228,14 @@ const IndexPage = () => {
                 <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
               </Typography>
             </Grid>
-            <Grid item container xs={12} justifyContent="space-between">
-              <Grid item xs={5}>
+            <Grid item container xs={12} gap={15} justifyContent="center">
+              <Grid item xs={8} md={5}>
                 <Stack className={styles.servicesImagesBlock} alignItems="center">
+                  <Box className={styles.servicesImagesBlockOverlay}></Box>
                   <StaticImage
                     className={styles.servicesImagesBlockImage}
                     placeholder="blurred"
-                    src="../images/main-page-intro-background.jpg"
+                    src="../images/main-finish-hotel.jpg"
                     alt="test"
                     width={450}
                     height={420}
@@ -245,8 +250,8 @@ const IndexPage = () => {
                   />
                 </Stack>
               </Grid>
-              <Grid item container xs={6} columnSpacing={3} rowGap={4} alignContent="center" textAlign="center">
-                <Grid item xs={6}>
+              <Grid item container xs={8} md={5} columnSpacing={3} rowGap={4} alignContent="center" textAlign="center">
+                <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faCompassDrafting} size="2x" />
                     <Typography variant="h5" component="h5">
@@ -257,7 +262,7 @@ const IndexPage = () => {
                     </Typography>
                   </Stack>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faTrowelBricks} size="2x" />
                     <Typography variant="h5" component="h5">
@@ -268,7 +273,7 @@ const IndexPage = () => {
                     </Typography>
                   </Stack>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faShieldHalved} size="2x" />
                     <Typography variant="h5" component="h5">
@@ -279,7 +284,7 @@ const IndexPage = () => {
                     </Typography>
                   </Stack>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <FontAwesomeIcon icon={faLock} size="2x" />
                     <Typography variant="h5" component="h5">
@@ -292,6 +297,31 @@ const IndexPage = () => {
                 </Grid>
               </Grid>
             </Grid>
+          </Grid>
+        </Container>
+      </Paper>
+      <Paper className={styles.contacts} component="section">
+        <Box className={styles.contactsBehindTitle}>
+          <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
+        </Box>
+        {/* <Box className={styles.bgElement}>
+          <StaticImage
+            className={styles.img}
+            src="../images/main-home.jpg"
+            alt="test"
+          />
+        </Box> */}
+        <Container>
+          <Grid className={styles.content} container columnGap={10}>
+            <Grid item xs={12}>
+              <Typography className={styles.contactsTitle} variant="h2" component="h2">
+                <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
+              </Typography>
+            </Grid>
+            <Grid className={styles.contactsFormBlock} item xs={10} md={5}>
+              <ContactForm />
+            </Grid>
+            <Grid item xs={8} md={6}></Grid>
           </Grid>
         </Container>
       </Paper>
