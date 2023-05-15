@@ -164,8 +164,9 @@ const IndexPage = () => {
               >
                 <SwiperSlide className={styles.swiperSlide}>
                   <Card className={styles.sliderCard}>
-                    <CardMedia className={styles.sliderCardImage}>
+                    <CardMedia className={styles.sliderCardMedia}>
                       <StaticImage
+                        className={styles.sliderCardMediaImg}
                         src="../images/main-page-intro-background.jpg"
                         alt="test"
                         width={300}
@@ -185,9 +186,10 @@ const IndexPage = () => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.swiperSlide}>
                   <Card className={styles.sliderCard}>
-                    <CardMedia className={styles.sliderCardImage}>
+                    <CardMedia className={styles.sliderCardMedia}>
                       <StaticImage
-                        src="../images/main-page-intro-background.jpg"
+                        className={styles.sliderCardMediaImg}
+                        src="../images/main-finish-hotel.jpg"
                         alt="test"
                         width={300}
                         height={300}
@@ -204,7 +206,6 @@ const IndexPage = () => {
                     </CardContent>
                   </Card>
                 </SwiperSlide>
-                
               </Swiper>
               <StaticImage
                 className={styles.projectsImageDotsGrid}
@@ -219,11 +220,11 @@ const IndexPage = () => {
       </Paper>
       <Paper className={styles.services} component="section">
         <Container>
+          <Box className={styles.servicesBehindTitle}>
+            <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
+          </Box>
           <Grid container>
             <Grid item xs={12}>
-              <Box className={styles.servicesBehindTitle}>
-                <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
-              </Box>
               <Typography className={styles.servicesTitle} variant="h2" component="h2">
                 <Trans i18nKey="services.title">Чому TDA DEVELOPMENT?</Trans>
               </Typography>
@@ -307,11 +308,11 @@ const IndexPage = () => {
           alt="test"
         />
         <Container>
+          <Box className={styles.contactsBehindTitle}>
+            <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
+          </Box>
           <Grid className={styles.content} container columnGap={10}>
             <Grid item xs={12}>
-              <Box className={styles.contactsBehindTitle}>
-                <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
-              </Box>
               <Typography className={styles.contactsTitle} variant="h2" component="h2">
                 <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
               </Typography>
