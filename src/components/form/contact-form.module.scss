@@ -27,7 +27,12 @@
       }
     }
 
-    :global(.MuiFormControl-root) {}
+    :global(.MuiFormControl-root) {
+      :global(.MuiFormHelperText-root) {
+        position: absolute;
+        top: 100%;
+      }
+    }
 
     button {
       background-image: linear-gradient(147deg, #fe8a39 0%, #FECC3F 74%);
