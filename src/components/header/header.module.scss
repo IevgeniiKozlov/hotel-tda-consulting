@@ -1,3 +1,4 @@
+@import "../../styles/styles.scss";
 .header { 
   width: 100%;
   position: absolute;
@@ -6,24 +7,62 @@
 }
 
 .toolbar {
+  gap: 1rem;
   justify-content: space-between
 }
 
 .logo {
-  width: fit-content;
+  min-width: 3.5rem;
 }
 
 .communication {
-  padding-top: 40px;
+  margin-left: auto;
 
-  .phone {
-    // display: flex;
-    gap: 10px;
+  &-item {
+    display: flex;
+    gap: 1rem;
     height: fit-content;
     align-items: center;
+    opacity: 0.7;
 
-    span {
-      font-size: 20px;
+    p {
+
+      @include for-phone-only {
+        font-size: 1rem;
+      }
     }
   }
+}
+
+.language-toggle-btn {
+  margin-left: 3rem;
+
+  @include for-phone-only {
+    margin-left: 0;
+  }
+
+  &-link {
+    @include for-phone-only {
+      font-size: 0.5rem
+    }
+  }
+
+
+  :global(.MuiToggleButton-root) {
+    border-color: #FECC3F;
+    color: black;
+
+    &:hover {
+      background-color: hsla(44, 99%, 62%, 0.563);
+    }
+  }
+
+  :global(.Mui-selected) {
+    background-color: #FECC3F;
+
+    &:hover {
+      background-color: #FECC3F;
+    }
+  }
+
 }
