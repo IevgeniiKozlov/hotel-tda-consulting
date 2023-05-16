@@ -10,7 +10,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { EffectFade, Mousewheel, Pagination } from "swiper"
 
-import * as styles from "./swiper.module.scss";
+import * as styles from "./projects-swiper.module.scss";
 
 export const ProjectsSwiper = () => {
   return (
