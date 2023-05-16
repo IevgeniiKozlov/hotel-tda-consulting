@@ -1,4 +1,4 @@
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { Trans } from 'gatsby-plugin-react-i18next'
 import { graphql } from 'gatsby'
 import * as React from "react"
 import {
@@ -7,11 +7,7 @@ import {
   Container,
   Stack,
   Grid,
-  Card,
-  CardContent,
-  CardMedia,
   Typography,
-  Button
 } from '@mui/material'
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -20,13 +16,8 @@ import { faCompassDrafting, faTrowelBricks, faLock, faShieldHalved } from "@fort
 import Layout from "../components/main-layout/layout"
 import * as styles from "./index.module.scss"
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { EffectFade, Mousewheel, Pagination } from "swiper";
 import { ContactForm } from "../components/form/contact-form";
+import { ProjectsSwiper } from "../components/swiper/projects-swiper";
 
 const IndexPage = () => {
   return (
@@ -40,7 +31,7 @@ const IndexPage = () => {
         />
         <Container>
           <Grid className={styles.content} container>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <Stack className={styles.presentationBlock}>
                 <Box className={styles.title}>
                   <Box className={styles.block} component="span"></Box>
@@ -48,11 +39,11 @@ const IndexPage = () => {
                 </Box>
                 <Box className={styles.role}>
                   <Box className={styles.block} component="span"></Box>
-                  <Typography className={styles.introTitle} variant="h1" component="p">DEVELOPMENT</Typography>
+                  <Typography variant="h1" component="p">DEVELOPMENT</Typography>
                 </Box>
               </Stack>
             </Grid>
-            <Grid item xs={5}></Grid>
+            <Grid item xs={12} md={5}></Grid>
           </Grid>
         </Container>
       </Paper>
@@ -150,63 +141,7 @@ const IndexPage = () => {
               </Box>
             </Grid>
             <Grid item xs={9} margin="0 auto">
-              <Swiper
-                direction={"vertical"}
-                mousewheel={true}
-                slidesPerView={1}
-                spaceBetween={50}
-                effect={"fade"}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[EffectFade, Mousewheel, Pagination]}
-                className={styles.swiper}
-              >
-                <SwiperSlide className={styles.swiperSlide}>
-                  <Card className={styles.sliderCard}>
-                    <CardMedia className={styles.sliderCardMedia}>
-                      <StaticImage
-                        className={styles.sliderCardMediaImg}
-                        src="../images/main-page-intro-background.jpg"
-                        alt="test"
-                        width={300}
-                        height={300}
-                      />
-                    </CardMedia>
-                    <CardContent className={styles.sliderCardContent}>
-                      <Typography className={styles.sliderCardContentTitle} variant="h4" component="h3">
-                        Lorem Ipsum Villa
-                      </Typography>
-                      <Typography className={styles.sliderCardContentDescription} variant="body1" component="div">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
-                      </Typography>
-                      <Button className={styles.sliderCardContentBtn}>READ MORE</Button>
-                    </CardContent>
-                  </Card>
-                </SwiperSlide>
-                <SwiperSlide className={styles.swiperSlide}>
-                  <Card className={styles.sliderCard}>
-                    <CardMedia className={styles.sliderCardMedia}>
-                      <StaticImage
-                        className={styles.sliderCardMediaImg}
-                        src="../images/main-finish-hotel.jpg"
-                        alt="test"
-                        width={300}
-                        height={300}
-                      />
-                    </CardMedia>
-                    <CardContent className={styles.sliderCardContent}>
-                      <Typography className={styles.sliderCardContentTitle} variant="h4" component="h3">
-                      Lorem Ipsum hotel
-                      </Typography>
-                      <Typography className={styles.sliderCardContentDescription} variant="body1" component="div">
-                        TEST consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
-                      </Typography>
-                      <Button className={styles.sliderCardContentBtn}>READ MORE</Button>
-                    </CardContent>
-                  </Card>
-                </SwiperSlide>
-              </Swiper>
+              <ProjectsSwiper />
               <StaticImage
                 className={styles.projectsImageDotsGrid}
                 src="../images/dots-grid-design-by-vexels.png"
@@ -311,7 +246,7 @@ const IndexPage = () => {
           <Box className={styles.contactsBehindTitle}>
             <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
           </Box>
-          <Grid className={styles.content} container columnGap={10}>
+          <Grid className={styles.content} container columnGap={10} justifyContent="center">
             <Grid item xs={12}>
               <Typography className={styles.contactsTitle} variant="h2" component="h2">
                 <Trans i18nKey="contacts.title">Зв'яжіться з нами</Trans>
