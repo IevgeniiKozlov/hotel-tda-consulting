@@ -15,8 +15,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./header.module.scss";
 
-export default () => {
-  const { languages, originalPath, t, i18n } = useI18next();
+const Header = () => {
+  const { languages, originalPath, i18n } = useI18next();
 
   return (
     <AppBar className={styles.header}>
@@ -65,3 +65,5 @@ export default () => {
     </AppBar>
   );
 }
+
+export default Header;
