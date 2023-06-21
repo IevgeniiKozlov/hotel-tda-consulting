@@ -1,0 +1,33 @@
+.my-swiper { 
+    width: 280px;
+    height: 440px;
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+    } 
+
+    .slide {
+        border-radius: 10px;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .text {
+        font-family: 'Baloo Paaji';
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #52503B
+    }
+
+    .card-content {
+        text-align: center;
+    }
+}
+
