@@ -17,6 +17,10 @@
   "dependencies": {
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
+    "@fontsource/roboto": "^4.5.8",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.2",
     "dotenv": "^16.0.3",
@@ -35,7 +39,6 @@
     "gatsby-transformer-json": "^5.10.0",
     "gatsby-transformer-remark": "^6.10.0",
     "gatsby-transformer-sharp": "^5.9.0",
-    "i18next": "^22.5.0",
     "leaflet": "^1.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,6 +47,9 @@
     "react-phone-number-input": "^3.2.23",
     "sass": "^1.62.1",
     "swiper": "^9.3.1",
+    "i18next": "^22.4.15",
+    "react-imask": "^6.6.1",
+    "save": "^2.9.0",
     "yup": "^1.1.1"
   }
 }
