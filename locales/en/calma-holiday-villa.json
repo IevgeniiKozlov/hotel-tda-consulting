@@ -1,0 +1,11 @@
+{
+  "test": "About company",
+    "intro": {
+      "descriptionTitle": "Luxury real estate on the Costa Brava",
+      "advantages": {
+          "20": "independent three-story buildings of 150 sq. m",
+          "10": "minutes to the city center",
+          "5": "minutes to the beach"
+      }
+    }
+}

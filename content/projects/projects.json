@@ -1,0 +1,95 @@
+{
+    "path": "/projects/",
+    "slug": "calma-holiday-villa", 
+    "content": {
+        "intro": {
+            "title": "Calma Holiday Villa",
+            "sub_title": "in heart Platja d’Aro",
+            "description_title": "Нерухомість класа люкс на узбережжі COSTA BRAVA",
+            "main_bg_image": {
+                "src": "../../src/images/platja-daro.jpg",
+                "alt": "platja-daro"
+            }
+        },
+        "greeting": [
+            { "title": "SPA комплекс", "description": "якийсь текст про оздоровчий комлекс",
+            "image": {
+                "src": "../../src/images/card-slider/spa.png",
+                "alt": "Оздоровчий комплекс & SPA"
+            }
+            },
+            { "title": "Вишукана кухня", "description": "Lorem Ipsum", 
+                "image": {
+                    "src": "../../src/images/card-slider/gastronomy.png" ,
+                    "alt": "Гастрономія"
+                }
+            },
+            { "title": "Памʼятки культури", "description": "Щось на історично культурному",
+                "image": {
+                    "src": "../../src/images/card-slider/pamyatnik.webp",
+                    "alt": "Історичні та культурні міста та памʼятки"
+                }    
+            },
+            { "title": "Культурні події", "description": "Музичні фестивалі, карнавали, тощо", 
+                "image": {
+                    "src": "../../src/images/card-slider/events-costa-brava.jpeg",
+                    "alt": "Музичні фестивалі, карнавали"
+                } 
+            }
+        ],
+        "placeDescription": {
+            "images": [
+                { 
+                    "image": {
+                        "src": "../../src/images/costa-brava-view.png",
+                        "alt": "Costa Bravo вид на узбережжя з містом"
+                    }
+                },
+                { 
+                    "image": {
+                        "src": "../../src/images/platja-daro-coastline.jpg",
+                        "alt": "Platja Daro та його мальовниче узбережжя"
+                    }
+                }
+            ]
+        },
+        "location": {
+            
+        },
+        "gallery": [
+            { "src": "../../src/images/gallery-slider/slide1.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide2.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide3.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide4.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide5.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide6.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide7.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide8.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide9.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide10.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide11.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide12.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide13.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide14.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide15.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/slide16.png", "alt": "Загальний огляд Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide1.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide2.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide3.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide4.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide5.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide6.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide7.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide8.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide9.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide10.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide11.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide12.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" },
+            { "src": "../../src/images/gallery-slider/room-slide13.png", "alt": "Огляд інтерʼєру кімнат на Calma Villa" }
+        ],
+        "services": {
+
+        }
+    }
+
+}

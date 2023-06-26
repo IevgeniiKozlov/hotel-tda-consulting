@@ -1,12 +1,13 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-const { languages, defaultLanguage } = require('./languages');
+
+const { languages, defaultLanguage } = require ('./languages');
 
 module.exports = {
   siteMetadata: {
     title: `Hotel TDA Consulting`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://tda-development.com.ua`
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -15,6 +16,25 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         "icon": "src/images/icon.png"
+      }
+    },
+    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: "dominantColor",
+          quality: 100,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: "transparent",
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        }
       }
     },
     {
@@ -37,26 +57,53 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",
+    "gatsby-transformer-json",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        name: "projects",
+        path: `${__dirname}/content/projects`
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "images",
+        path: "./src/images/"
       },
       __key: "images"
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/locales`,
-        name: `locale`
+        name: "pages",
+        path: "./src/pages/"
+      },
+      __key: "pages"
+    },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          "Manrope",
+          "source sans pro\:300,400,500,600"
+        ],
+        display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
     },
     {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
-        languages,
-        defaultLanguage,
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `ua`],
+        defaultLanguage: `ua`,
         i18nextOptions: {
           debug: true,
           fallbackLng: defaultLanguage,
@@ -67,6 +114,18 @@ module.exports = {
           }
         },
       },
-    }
+      pages: [
+        {
+          matchPath: '/:lang?/projects/:slug*',
+          getLanguageFromPath: true,
+        },
+      ]
+    },
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    },
   ]
 };
