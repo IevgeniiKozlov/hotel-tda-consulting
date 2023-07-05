@@ -4,7 +4,6 @@ import { faCopyright } from "@fortawesome/free-solid-svg-icons"
 import {
   Paper,
   Container,
-  Box,
   Typography,
   Stack
 } from '@mui/material';
