@@ -2,15 +2,13 @@ import * as React from "react";
 import { useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import * as styles from "./slider.module.scss"
 
-// Import Swiper styles
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import "swiper/scss/free-mode";
 import 'swiper/scss/autoplay';
 import "swiper/scss/thumbs";
-import * as styles from "./slider.module.scss"
-
 // Import required modules
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper";
 
@@ -23,8 +21,8 @@ const SliderGallery = ({ images }) => {
     <>
       <Swiper
             style={{
-                "--swiper-navigation-color": "#E08631",
-                "--swiper-pagination-color": "#E08631",
+                "--swiper-navigation-color": "#FECC3F",
+                "--swiper-pagination-color": "#FECC3F",
                 }}
             spaceBetween={10}
             loop={true}
