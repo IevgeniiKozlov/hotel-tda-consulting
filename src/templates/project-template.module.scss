@@ -1,4 +1,4 @@
-@import "./common.scss";
+@import "../styles/styles.scss";
 @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
 
 // Intro section 
@@ -7,7 +7,7 @@
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
-	padding-top: 120px;
+	padding-top: 200px;
 
 	&::after {
 		content: '';
@@ -41,7 +41,7 @@
 	&-title {
 		font-family: 'Baloo Paaji';
 		font-weight: 500;
-		color: #E08631;
+		color: #FECC3F;
 	}
 
 	&-sub-title {
@@ -103,6 +103,8 @@
 
 
 	.frame {
+		display: flex;
+		align-items: center;
 		position: relative;
 		padding: 20px;
 	}
@@ -111,7 +113,7 @@
 		display: block;
 		position: absolute;
 		content: '';
-		border: 3px solid #E08631;
+		border: 3px solid #FECC3F;
 		width: 80px;
 		height: 80px;
 		border-right-color: transparent;
@@ -124,7 +126,7 @@
 		display: block;
 		position: absolute;
 		content: '';
-		border: 3px solid #E08631;
+		border: 3px solid #FECC3F;
 		width: 80px;
 		height: 80px;
 		border-left-color: transparent;
@@ -157,7 +159,7 @@
 	.title {
 		font-family: 'Baloo Paaji';
 		font-weight: 500;
-		color: #E08631;
+		color: #FECC3F;
 	}
 
 	.text {
@@ -185,7 +187,7 @@
 	.title {
 		font-family: 'Baloo Paaji';
 		font-weight: 500;
-		color: #E08631;
+		color: #FECC3F;
 	}
 
 	.text {
@@ -211,7 +213,7 @@
 		display: block;
 		position: absolute;
 		content: '';
-		border: 3px solid #E08631;
+		border: 3px solid #FECC3F;
 		width: 80px;
 		height: 80px;
 		border-right-color: transparent;
@@ -224,7 +226,7 @@
 		display: block;
 		position: absolute;
 		content: '';
-		border: 3px solid #E08631;
+		border: 3px solid #FECC3F;
 		width: 80px;
 		height: 80px;
 		border-left-color: transparent;
@@ -254,7 +256,7 @@
 	.title {
 		font-family: 'Baloo Paaji';
 		font-weight: 500;
-		color: #E08631;
+		color: #FECC3F;
 	}
 }
 
@@ -270,13 +272,13 @@
 		font-size: 50px;
 		font-family: 'Manrope';
 		font-weight: 700;
-		color: #E08631;
+		color: #FECC3F;
 	}
 
 	&-icon {
-		width: 40px;
-		height: 40px;
-		color: #52503B;
+		width: 50px;
+		height: 50px;
+		color: #FECC3F;
 	}
 
 	.text {
@@ -286,23 +288,49 @@
 	}
 }
 
-// Structure Banner calma holliday villa section
-
-.contact-us {
+/* Contacts */
+.contacts {
 	position: relative;
 	width: 100%;
+	padding: 70px 0;
 
-	&-info {
+	.alignment {
 		display: flex;
-		justify-content: start;
-		margin-left: 24px;
-		padding: 70px 0;
+		justify-content: center;
 	}
-
+  
+	&-behind-title {
+	  position: absolute;
+	  opacity: 0.05;
+	  white-space: nowrap;
+  
+	  @include for-phone-only {
+		top: -1rem;
+		left: -1rem;
+		font-size: 6rem;
+	  }
+  
+	  @include for-tablet-portrait-up {
+		top: 0rem;
+		left: -1rem;
+		font-size: 7rem;
+	  }
+  
+	  @include for-tablet-landscape-up {
+		top: -1rem;
+		font-size: 10rem;
+	  }
+  
+	  @include for-desktop-up {
+		top: -2rem;
+		font-size: 15rem;
+	  }
+	}
+  
 	.title {
-		font-family: 'Manrope';
-		font-weight: 700;
-		color: rgb(18, 17, 17);
+		font-family: 'Baloo Paaji';
+		font-weight: 500;
+		color: #FECC3F;
 	}
 }
 

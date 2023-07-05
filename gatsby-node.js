@@ -23,15 +23,13 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
             greeting {
-              description
-              title
-              image {
+              images {
                 alt
+                id
                 src {
                   childImageSharp {
-                    gatsbyImageData(width: 280, height: 340, formats: WEBP)
+                    gatsbyImageData(width: 280, height: 350, formats: WEBP)
                   }
-                  id
                 }
               }
             }
@@ -86,7 +84,7 @@ exports.createPages = async ({ graphql, actions }) => {
     //   console.log(node.content)
       const project = queryResult.data.allProjectsJson.edges.find((project) => project.node.slug === locale.node.ns)
       createPage({
-        path: project.node.path + project.node.slug,
+        path: project.node.path + '/' + project.node.slug,
         component: path.resolve('./src/templates/project-template.js'),
         context: {
           project,

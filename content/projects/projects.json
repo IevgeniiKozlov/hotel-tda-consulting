@@ -1,5 +1,5 @@
 {
-    "path": "/projects/",
+    "path": "/projects",
     "slug": "calma-holiday-villa", 
     "content": {
         "intro": {
@@ -11,32 +11,30 @@
                 "alt": "platja-daro"
             }
         },
-        "greeting": [
-            { "title": "SPA комплекс", "description": "якийсь текст про оздоровчий комлекс",
-            "image": {
-                "src": "../../src/images/card-slider/spa.png",
-                "alt": "Оздоровчий комплекс & SPA"
-            }
-            },
-            { "title": "Вишукана кухня", "description": "Lorem Ipsum", 
-                "image": {
+        "greeting": {
+            "images": [      
+                {
+                    "id": "spa",
+                    "src": "../../src/images/card-slider/spa.png",
+                    "alt": "Оздоровчий комплекс & SPA"
+                },
+                {
+                    "id": "dishes",
                     "src": "../../src/images/card-slider/gastronomy.png" ,
                     "alt": "Гастрономія"
-                }
-            },
-            { "title": "Памʼятки культури", "description": "Щось на історично культурному",
-                "image": {
+                },
+                {
+                    "id": "culture",
                     "src": "../../src/images/card-slider/pamyatnik.webp",
                     "alt": "Історичні та культурні міста та памʼятки"
-                }    
-            },
-            { "title": "Культурні події", "description": "Музичні фестивалі, карнавали, тощо", 
-                "image": {
+                },
+                {
+                    "id": "events",
                     "src": "../../src/images/card-slider/events-costa-brava.jpeg",
                     "alt": "Музичні фестивалі, карнавали"
-                } 
-            }
-        ],
+                }
+            ]
+        },
         "placeDescription": {
             "images": [
                 { 

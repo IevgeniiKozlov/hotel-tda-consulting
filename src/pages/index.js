@@ -16,8 +16,8 @@ import { faCompassDrafting, faTrowelBricks, faLock, faShieldHalved } from "@fort
 import Layout from "../components/main-layout/layout"
 import * as styles from "./index.module.scss"
 
-import { ContactForm } from "../components/form/contact-form";
-import { ProjectsSwiper } from "../components/swiper/projects-swiper";
+import ContactForm from "../components/form/contact-form";
+import {ProjectsSwiper} from "../components/swiper/projects-swiper";
 
 const IndexPage = () => {
   return (
@@ -263,7 +263,7 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query ($language: String!) {

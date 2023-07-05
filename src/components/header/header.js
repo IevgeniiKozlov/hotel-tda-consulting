@@ -36,7 +36,7 @@ const Header = () => {
           <Stack className={styles.communication} direction="column">
             <Box className={styles.communicationItem}>
               <FontAwesomeIcon icon={faEnvelope} size="1x" beat />
-              <Typography variant="h5" component="p">example@gmail.com</Typography>
+              <Typography variant="h5" component="p">contact@tda-development.com.ua</Typography>
             </Box>
             <Box className={styles.communicationItem}>
               <FontAwesomeIcon icon={faPhone} size="1x" beat />

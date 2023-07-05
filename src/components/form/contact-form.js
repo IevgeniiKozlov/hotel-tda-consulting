@@ -29,10 +29,9 @@ const PhoneInputField = React.forwardRef((props, ref) => {
       name="phoneNumber"
     />
   );
-
 });
 
-export const ContactForm = () => {
+const ContactForm = () => {
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -53,7 +52,7 @@ export const ContactForm = () => {
             fullWidth
             id="fullName"
             name="fullName"
-            label={<Trans i18nKey="contact-form.name">Ваше им'я</Trans>}
+            label={<Trans i18nKey="contact-form.name">Ваше ім'я</Trans>}
             value={formik.values.fullName}
             onChange={formik.handleChange}
             error={formik.touched.fullName && Boolean(formik.errors.fullName)}
@@ -75,3 +74,5 @@ export const ContactForm = () => {
     </Box>
   );
 }
+
+export default ContactForm;
