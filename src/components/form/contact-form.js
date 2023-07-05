@@ -29,7 +29,6 @@ const PhoneInputField = React.forwardRef((props, ref) => {
       name="phoneNumber"
     />
   );
-
 });
 
 const ContactForm = () => {
