@@ -24,14 +24,14 @@
     margin-top: 0;
   }
   
-  :global(.swiper-wrapper) {}
+  // :global(.swiper-wrapper) {}
   
   :global(.swiper-slide) {
     display: flex;
     align-items: center;
   }
   
-  :global(.swiper-slide-active) {}
+  // :global(.swiper-slide-active) {}
    
   :global(.swiper-pagination) {
     z-index: 21;

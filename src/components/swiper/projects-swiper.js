@@ -39,7 +39,7 @@ export const ProjectsSwiper = () => {
           </CardMedia>
           <CardContent className={styles.sliderCardContent}>
             <Typography className={styles.sliderCardContentTitle} variant="h4" component="h3">
-              Lorem Ipsum Villa
+              Calma Holiday Villa
             </Typography>
             <Typography className={styles.sliderCardContentDescription} variant="body1" component="div">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
@@ -48,7 +48,7 @@ export const ProjectsSwiper = () => {
           </CardContent>
         </Card>
       </SwiperSlide>
-      <SwiperSlide className={styles.swiperSlide}>
+      {/* <SwiperSlide className={styles.swiperSlide}>
         <Card className={styles.sliderCard}>
         <CardMedia className={styles.sliderCardMedia}>
             <StaticImage
@@ -69,7 +69,7 @@ export const ProjectsSwiper = () => {
             <Button className={styles.sliderCardContentBtn}>READ MORE</Button>
         </CardContent>
         </Card>
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   )
 }
