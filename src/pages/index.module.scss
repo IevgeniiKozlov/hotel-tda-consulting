@@ -220,6 +220,7 @@
   position: relative;
   padding-bottom: 50px;
   overflow: hidden;
+  box-shadow: none;
   
   @include for-phone-only {
     padding-top: 50px;
@@ -274,8 +275,6 @@
       font-size: 4rem;
     }
   }
-
-  // &-mission-block {}
 
   &-images-block {
     display: flex;
