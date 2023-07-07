@@ -21,11 +21,10 @@ const ProjectTemplate = ({pageContext}) => {
   const project = pageContext.project.node.content;
 
   const { intro, greeting, placeDescription, gallery } = project;
-
-  const mainBg = getImage(intro.main_bg_image.src.childImageSharp.gatsbyImageData);
+  
+  const mainBg = getImage(intro.main_bg_image.src);
   const placeDescriptionImage = placeDescription.images.map((img) => img.image);
   const galleryImage = gallery.map((image) => image)
-
 
   return (
     <ProjectLayout>
