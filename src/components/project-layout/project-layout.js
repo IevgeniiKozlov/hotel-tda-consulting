@@ -13,17 +13,17 @@ import { wrapper } from "./project-layout.module.scss";
 
 const ProjectLayout = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <StyledEngineProvider injectFirst>
-        <Box className={wrapper}>
-          <Header />
-            <main>
-              { children }
-            </main>
-          <Footer /> 
-        </Box>
-      </StyledEngineProvider>
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+          <Box className={wrapper}>
+            <Header />
+              <main>
+                { children }
+              </main>
+            <Footer /> 
+          </Box>
+      </ThemeProvider>
+    </StyledEngineProvider>
   )
 }
 
