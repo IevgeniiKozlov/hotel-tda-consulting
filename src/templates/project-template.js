@@ -40,10 +40,10 @@ const ProjectTemplate = ({pageContext}) => {
             <Grid item xs={12} mb={5}>
               <Stack spacing={2} className={styles.textAnimation}>
                 <Typography className={styles.introTitle} variant="h1" component="h1">
-                  Calma Holiday Villa
+                  <Trans i18nKey="intro.title">Calma Holiday Villa</Trans>
                 </Typography>
                 <Typography className={styles.introSubTitle} variant="h2" component="p">
-                  in heart Platja d`Aro
+                  <Trans i18nKey="intro.subTitle">in heart Platja d`Aro</Trans>
                 </Typography>
                 <Typography className={styles.introDescriptionTitle} variant="h5" component="p">
                   <Trans i18nKey="intro.descriptionTitle">Нерухомість класа люкс на узбережжі Costa Brava</Trans>
