@@ -39,17 +39,17 @@
     "gatsby-transformer-json": "^5.10.0",
     "gatsby-transformer-remark": "^6.10.0",
     "gatsby-transformer-sharp": "^5.9.0",
+    "i18next": "^22.4.15",
     "leaflet": "^1.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.3.1",
+    "react-imask": "^6.6.1",
     "react-leaflet": "^4.2.1",
     "react-phone-number-input": "^3.2.23",
     "sass": "^1.62.1",
-    "swiper": "^9.3.1",
-    "i18next": "^22.4.15",
-    "react-imask": "^6.6.1",
     "save": "^2.9.0",
+    "swiper": "^9.3.1",
     "yup": "^1.1.1"
   }
 }
