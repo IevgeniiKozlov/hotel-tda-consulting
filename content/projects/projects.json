@@ -1,11 +1,9 @@
 {
-    "path": "/projects",
+    "path": "projects",
     "slug": "calma-holiday-villa", 
+    "projectPhoto": { "src": "../../src/images/gallery-slider/slide5.png", "alt": "Загальний огляд Calma Villa" },
     "content": {
         "intro": {
-            "title": "Calma Holiday Villa",
-            "sub_title": "in heart Platja d’Aro",
-            "description_title": "Нерухомість класа люкс на узбережжі COSTA BRAVA",
             "main_bg_image": {
                 "src": "../../src/images/platja-daro.jpg",
                 "alt": "platja-daro"
