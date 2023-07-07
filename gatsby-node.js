@@ -3,6 +3,7 @@ require("dotenv").config({
 })
 
 const path = require("path");
+const defaultLanguage = 'ua';
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -34,9 +35,6 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
             intro {
-              description_title
-              sub_title
-              title
               main_bg_image {
                 alt
                 src {
@@ -78,13 +76,11 @@ exports.createPages = async ({ graphql, actions }) => {
 `);
 
   queryResult.data.allLocale.edges.forEach((locale) => {
-    const lang = locale.node.language
-    // console.log(lang)
+    const lang = locale.node.language === defaultLanguage ? '/' : `/${locale.node.language}/`;
     queryResult.data.allProjectsJson.edges.forEach(({ node }) => {
-    //   console.log(node.content)
       const project = queryResult.data.allProjectsJson.edges.find((project) => project.node.slug === locale.node.ns)
       createPage({
-        path: project.node.path + '/' + project.node.slug,
+        path: lang + project.node.path + '/' + project.node.slug,
         component: path.resolve('./src/templates/project-template.js'),
         context: {
           project,
