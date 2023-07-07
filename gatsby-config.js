@@ -104,6 +104,7 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: [`en`, `ua`],
         defaultLanguage: `ua`,
+        siteUrl: `http://localhost:3000`,
         i18nextOptions: {
           debug: true,
           fallbackLng: defaultLanguage,
@@ -113,13 +114,13 @@ module.exports = {
             escapeValue: false, // not needed for react as it escapes by default
           }
         },
+        pages: [
+          {
+            matchPath: '/:lang?/projects/:uid',
+            getLanguageFromPath: true,
+          },
+        ]
       },
-      pages: [
-        {
-          matchPath: '/:lang?/projects/:slug*',
-          getLanguageFromPath: true,
-        },
-      ]
     },
     {
       resolve: 'gatsby-plugin-react-leaflet',

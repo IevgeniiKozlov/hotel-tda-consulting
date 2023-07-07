@@ -17,9 +17,12 @@ import Layout from "../components/main-layout/layout"
 import * as styles from "./index.module.scss"
 
 import ContactForm from "../components/form/contact-form";
-import {ProjectsSwiper} from "../components/swiper/projects-swiper";
+import {ProjectsSwiper} from "../components/swiper/projects-swiper/projects-swiper";
 
-const IndexPage = () => {
+const IndexPage = (props) => {
+  const projectsData = props.data.allProjectsJson.edges.map(({ node }) => ({ ...node}));
+  const { language, pageContext } = props;
+
   return (
     <Layout>
       <Paper className={styles.intro} component="section">
@@ -141,7 +144,7 @@ const IndexPage = () => {
               </Box>
             </Grid>
             <Grid item xs={9} margin="0 auto">
-              <ProjectsSwiper />
+              <ProjectsSwiper language={pageContext.language} data={projectsData}/>
               <StaticImage
                 className={styles.projectsImageDotsGrid}
                 src="../images/dots-grid-design-by-vexels.png"
@@ -268,13 +271,29 @@ export default IndexPage;
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(
-      filter: { ns: { in: ["index"] }, language: { eq: $language } }
+      filter: { ns: { in: ["index", "calma-holiday-villa"] }, language: { eq: $language } }
     ) {
       edges {
         node {
           ns
           data
           language
+        }
+      }
+    }
+    allProjectsJson {
+      edges {
+        node {
+          path
+          projectPhoto {
+            alt
+            src {
+              childImageSharp {
+                gatsbyImageData(width: 300, height: 300, formats: WEBP)
+              }
+            }
+          }
+          slug
         }
       }
     }
