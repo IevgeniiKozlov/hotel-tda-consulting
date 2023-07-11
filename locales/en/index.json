@@ -52,6 +52,10 @@
       "phone": {
         "required": "Phone is required"
       }
+    },
+    "status": {
+      "success": "Mail sent successfully",
+      "failed": "Failed request" 
     }
   }
 }

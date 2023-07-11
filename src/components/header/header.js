@@ -40,7 +40,7 @@ const Header = () => {
             </Box>
             <Box className={styles.communicationItem}>
               <FontAwesomeIcon icon={faPhone} size="1x" beat />
-              <Typography variant="h5" component="p">+38 (050) 333 22 11</Typography>
+              <Typography variant="h5" component="p">+380 67 634 04 22</Typography>
             </Box>
           </Stack>
           <ToggleButtonGroup

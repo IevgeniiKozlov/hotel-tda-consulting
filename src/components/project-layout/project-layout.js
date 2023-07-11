@@ -1,9 +1,7 @@
 import * as React from "react";
 import { StyledEngineProvider } from '@mui/material/styles';
 import { Box } from '@mui/material';
-import {
-  ThemeProvider,
-} from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 import Header from "../header/header";
 import Footer from "../footer/footer";

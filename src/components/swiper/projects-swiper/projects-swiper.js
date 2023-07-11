@@ -49,8 +49,7 @@ export const ProjectsSwiper = (props) => {
                 <StaticImage
                   className={styles.sliderCardMediaImg}
                   src="../images/main-page-intro-background.jpg"
-                  alt="test"
-                  
+                  alt="Calma holiday villa"
                 />
               </CardMedia>
               <CardContent className={styles.sliderCardContent}>
