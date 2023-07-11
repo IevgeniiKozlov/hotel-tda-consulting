@@ -281,9 +281,6 @@ const ProjectTemplate = ({pageContext}) => {
         </Container>
       </Paper>
       <Paper className={styles.contacts} elevation={0}>
-        {/* <Box className={styles.contactsBehindTitle}>
-          <Trans i18nKey="contacts.title">Зацікавила пропозиція</Trans>
-        </Box> */}
         <Grid container spacing={3}>
           <Grid item xs={12} className={styles.alignment}>
             <Typography className={styles.title} variant="h3" component="p">
