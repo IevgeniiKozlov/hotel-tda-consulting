@@ -134,7 +134,7 @@ const IndexPage = (props) => {
       </Paper>
       <Paper className={styles.projects} component="section">
         <Container>
-          <Grid container>
+          <Grid container justifyContent="center">
             <Grid item xs={12}>
               <Typography className={styles.projectsTitle} variant="h2" component="h2" hidden>
                 <Trans i18nKey="projects.title">Проекти</Trans>
@@ -143,15 +143,17 @@ const IndexPage = (props) => {
                 <Trans i18nKey="projects.title">Проекти</Trans>
               </Box>
             </Grid>
-            <Grid item xs={9} margin="0 auto">
-              <ProjectsSwiper language={pageContext.language} data={projectsData}/>
-              <StaticImage
-                className={styles.projectsImageDotsGrid}
-                src="../images/dots-grid-design-by-vexels.png"
-                alt="test"
-                width={400}
-                height={400} 
-              />
+            <Grid item xs={9}>
+              <Stack className={styles.projectsContentBlock}>
+                <ProjectsSwiper language={pageContext.language} data={projectsData}/>
+                <StaticImage
+                  className={styles.projectsImageDotsGrid}
+                  src="../images/dots-grid-design-by-vexels.png"
+                  alt="test"
+                  width={400}
+                  height={400} 
+                />
+              </Stack>
             </Grid>
           </Grid>
         </Container>
