@@ -89,8 +89,8 @@ const IndexPage = (props) => {
                 </Box>
               </Grid>
             </Grid>
-            <Grid item container xs={12} md={6} rowSpacing={4} justifyContent="center">
-              <Grid item xs={8} md={11} lg={10}>
+            <Grid item container xs={12} md={6} rowGap={6} justifyContent="center">
+              <Grid item xs={10}>
                 <Stack className={styles.aboutCompanyImagesBlock}>
                   <Box className={styles.aboutCompanyImagesBlockOverlay}></Box>
                   <StaticImage
@@ -118,7 +118,7 @@ const IndexPage = (props) => {
                   /> 
                 </Stack>
               </Grid>
-              <Grid item xs={11}>
+              <Grid item xs={10} sm={8}>
                 <Stack className={styles.aboutCompanyTargetBlock} spacing={2}>
                   <Typography className={styles.aboutCompanyTargetBlockTitle} variant="h5" component="h3">
                     <Trans i18nKey="about-company.target.title">Ціль</Trans>
@@ -168,7 +168,7 @@ const IndexPage = (props) => {
               </Typography>
             </Grid>
             <Grid item container xs={12} columnGap={5} rowGap={15} justifyContent="center" alignItems="center">
-              <Grid item xs={8} md={6}>
+              <Grid item xs={10} md={6}>
                 <Stack className={styles.servicesImagesBlock}>
                   <Box className={styles.servicesImagesBlockOverlay}></Box>
                   <StaticImage
@@ -179,7 +179,7 @@ const IndexPage = (props) => {
                     width={450}
                     height={420}
                   />
-                  <Box className={styles.servicesImagesBlockSquare} width={450} height={420}></Box>
+                  <Box className={styles.servicesImagesBlockSquare}></Box>
                   <StaticImage
                     className={styles.servicesImagesBlockDotsGrid}
                     src="../images/dots-grid-design-by-vexels.png"
