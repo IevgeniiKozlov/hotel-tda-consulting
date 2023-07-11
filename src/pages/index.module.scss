@@ -278,12 +278,12 @@
 
   &-images-block {
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
+    grid-template-columns: repeat(16, 1fr);
     position: relative;
     top: 30px;
 
     &-overlay {
-      grid-column: 1 / span 9;
+      grid-column: 1 / span 12;
       grid-row: 1;
       z-index: 3;
       border-radius: 25px;
@@ -291,7 +291,7 @@
     }
 
     &-image {
-      grid-column: 1 / span 9;
+      grid-column: 1 / span 12;
       grid-row: 1;
       z-index: 2;
       border-radius: 1.5rem;
@@ -299,17 +299,17 @@
     }
 
     &-square {
-      grid-column: 2 / span 9;
+      grid-column: 3 / span 12;
       grid-row: 1;
       z-index: 1;
-      margin-top: 10%;
-      margin-bottom: -10%;
+      margin-top: 12%;
+      margin-bottom: -12%;
       border-radius: 1.5rem;
       background-image: linear-gradient(147deg, #fe8a39 0%, #FECC3F 74%);
     }
 
     &-dots-grid {
-      grid-column: 1 / span 9;
+      grid-column: 1 / span 11;
       grid-row: 1;
       z-index: 0;
       margin-bottom: -80%;
@@ -318,7 +318,7 @@
     }
 
     &-dots-grid-second {
-      grid-column: 3 / span 9;
+      grid-column: 5 / span 11;
       grid-row: 1;
       z-index: 0;
       margin-top: 25%;
@@ -326,13 +326,13 @@
     }
 
     &-dots-grid-third {
-      grid-column: 3 / span 9;
+      grid-column: 3 / span 11;
       grid-row: 1;
       z-index: 0;
-      margin-left: 101%;
-      margin-right: -101%;
-      margin-top: 51%;
-      margin-bottom: -51%;
+      margin-left: 118%;
+      margin-right: -120%;
+      margin-top: 48%;
+      margin-bottom: -48%;
     }
   }
 
